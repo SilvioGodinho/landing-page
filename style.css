@@ -1,0 +1,48 @@
+body{
+  background: #F3EDED;
+}
+
+header{
+  background: #D6D5D5;
+  height: 133px;
+  width: 100%;
+  left: -211px;
+  top: -350px;
+  border-radius: 0px;
+
+}
+
+.titulo-principal{
+  text-align: center;
+  font-size: 50px;
+  padding: 10px;
+  float: center;
+}
+
+.logo{
+  width: 173px;
+  height: 162px;
+  float: left;
+	margin:  0 0px 0px 0;
+ 
+}
+.menus{
+  text-align: center;
+}
+
+.menus li{
+  display: inline;
+	margin: 0 0 0 15px;
+  font-size: 20px;
+  
+
+}
+
+.imagemhome{
+  height: 270px;
+  width: 340px;
+  left: 593px;
+  top: -147px;
+  border-radius: 0px;
+
+}
