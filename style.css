@@ -148,7 +148,7 @@ header{
   font-size: 25px;
   line-height: 34px;
   text-align: justify;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
 }
 
 .livrosdomes h3{
@@ -182,7 +182,7 @@ header{
   font-size: 25px;
   line-height: 34px;
   text-align: justify;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
 }
 
 .blocodocumentario {
@@ -190,11 +190,21 @@ header{
   padding: 20px;
 }
 
+.blocodocumentario h3,p{
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+
+}
+
 .blocodocumentario h3{
   margin-top: 8vh;
   text-align: center;
 }
 .blocodocumentario p{
-  text-align: center;
-  padding: 5px;
+  text-align: justify;
+  padding: 15px;
 }
+/*-------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------SECTION MUSICAS-----------------------------------------------*/
