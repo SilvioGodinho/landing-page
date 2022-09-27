@@ -9,48 +9,49 @@
     <title>Brain Academy</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            // Adicionando smooth para todos os links
-            $("a").on('click', function (event) {
+      $(document).ready(function () {
+        // Adicionando smooth para todos os links
+        $('a').on('click', function (event) {
+          // fazendo com que o valor do this.hash esteja certo em todo tempo
+          if (this.hash !== '') {
+            event.preventDefault()
 
-                // fazendo com que o valor do this.hash esteja certo em todo tempo
-                if (this.hash !== "") {
+            // Salvando valor hash
+            var hash = this.hash
 
-                    event.preventDefault();
+            // Usando jQuery para adicionar smooth de rolanmento de página
+            // Adicionando onde deve ser usado o método e colocando periodo de tempo para scrolar a página
+            $('html, body').animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800,
+              function () {
+                //Colocando que sempre que o hash(#) for colado deve ativar a função
+                window.location.hash = hash
+              }
+            )
+          } // fim
 
-                    // Salvando valor hash
-                    var hash = this.hash;
+          window.onscroll = function () {
+            myFunction()
+          }
 
-                    // Usando jQuery para adicionar smooth de rolanmento de página
-                    // Adicionando onde deve ser usado o método e colocando periodo de tempo para scrolar a página
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
+          var header = document.getElementById('Header')
+          var sticky = header.offsetTop
 
-                        //Colocando que sempre que o hash(#) for colado deve ativar a função
-                        window.location.hash = hash;
-                    });
-                } // fim
-
-
-                window.onscroll = function () { myFunction() };
-
-                var header = document.getElementById("Header");
-                var sticky = header.offsetTop;
-
-                function myFunction() {
-                    if (window.pageYOffset > sticky) {
-                        header.classList.add("sticky");
-                    } else {
-                        header.classList.remove("sticky");
-                    }
-                }
-
-            });
-        });
+          function myFunction() {
+            if (window.pageYOffset > sticky) {
+              header.classList.add('sticky')
+            } else {
+              header.classList.remove('sticky')
+            }
+          }
+        })
+      })
     </script>
   </head>
-  
+
   <body>
     <div class="container">
       <header>
@@ -67,7 +68,7 @@
           <nav>
             <ul class="menus">
               <li>Inicio |</li>
-              <li><a href = "#porqueler">Por que ler? |</a></li>
+              <li><a href="#porqueler">Por que ler? |</a></li>
               <li>Livros do mês |</li>
               <li>Documentários |</li>
               <li>Músicas</li>
@@ -112,7 +113,7 @@
         </div>
       </section>
 
-      <section id = "porqueler" class="porqueler" >
+      <section id="porqueler" class="porqueler">
         <h2 class="titulocorpopagina1"><b> Por que ler ? </b></h2>
         <div class="corpopagina1">
           <p>
@@ -267,8 +268,38 @@
       </section>
 
       <section class="musicas">
+        <div class = "blocotextomusicas">
+          <h2>Musicas</h2>
+          <p>
+            Musicas para ouvir e relaxar e aproveitar para conhecer artistas
+            como Milton Nascimento, Jorge Ben-Jor, Tim Maia e Racionais. Uma
+            seleção com os melhores albuns de todos os tempos, todo mês uma
+            seleção diferente pra você.
+          </p>
+        <div>
+        <div class = "blocomusicas1">
+            <iframe
+              style="border-radius: 12px"src="https://open.spotify.com/embed/album/5risYG7klZCSLMNxB9dZhf?utm_source=generator" width="25%" height="80" frameborder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+            ></iframe>
+          <iframe 
+            style="border-radius:12px" src="https://open.spotify.com/embed/album/5rcMJNWebtl2r2S18Je1A0?utm_source=generator" width="25%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+          </iframe>
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7jayGTnTrgeSEqMyTJU0nB?utm_source=generator" width="25%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class = "blocomusicas2">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7J9wATH6I891OTHteIWSEj?utm_source=generator" width="25%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+       
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1UzrzuOmZfBgXyS3pgKD10?utm_source=generator" width="25%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2AwtTIdUFaUl69alioeFut?utm_source=generator" width="25%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
       </section>
 
+      <footer>
+        <p class="copyright">&copy;Copyright Brain Academy 2022</p>
+      </footer>
     </div>
   </body>
 </html>
