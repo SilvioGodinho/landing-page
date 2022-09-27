@@ -10,24 +10,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        // Adicionando smooth para todos os links
+        
         $('a').on('click', function (event) {
-          // fazendo com que o valor do this.hash esteja certo em todo tempo
+          
           if (this.hash !== '') {
             event.preventDefault()
 
-            // Salvando valor hash
+         
             var hash = this.hash
 
-            // Usando jQuery para adicionar smooth de rolanmento de página
-            // Adicionando onde deve ser usado o método e colocando periodo de tempo para scrolar a página
+        
             $('html, body').animate(
               {
                 scrollTop: $(hash).offset().top
               },
               800,
               function () {
-                //Colocando que sempre que o hash(#) for colado deve ativar a função
+                
                 window.location.hash = hash
               }
             )
@@ -60,6 +59,8 @@
           src="imagens/logo.png"
           alt="cerebro fazendo exercicio"
         />
+        <!--https://cdn.pixabay.com/photo/2022/08/30/08/04/brain-7420599__340.png-->
+
 
         <div class="bloconav">
           <div class="titulo-principal">
@@ -67,11 +68,10 @@
           </div>
           <nav>
             <ul class="menus">
-              <li>Inicio |</li>
               <li><a href="#porqueler">Por que ler? |</a></li>
-              <li>Livros do mês |</li>
-              <li>Documentários |</li>
-              <li>Músicas</li>
+              <li><a href ="#livrosdomes">Livros do mês |</a></li>
+              <li><a href = "#documentarios">Documentários |</a></li>
+              <li><a href = "#musicas"> Músicas</a></li>
             </ul>
           </nav>
         </div>
@@ -84,6 +84,7 @@
             src="imagens/cerebro.png"
             alt="cerebro colorido"
           />
+          <!--https://cdn.pixabay.com/photo/2017/12/13/16/01/brain-3017071__340.png-->
           <div class="textopartesuperior">
             <h2><b> Seja maromba no conhecimento !!</b></h2>
             <p>
@@ -97,6 +98,7 @@
             src="imagens/cerebro1-removebg-preview.png"
             alt="cerebro colorido"
           />
+          <!--https://cdn.pixabay.com/photo/2017/02/13/08/54/brain-2062057__340.jpg.png-->
         </div>
 
         <div class="textopartesuperior2">
@@ -117,13 +119,15 @@
             da sociedade. Hoje, temos todos os dias a chance de conhecer diversas culturas diferentes, 
             estar em mundos cheios de magia, conhecer histórias antigas e atuais ou até mesmo especular sobre o 
             futuro da humanidade. Ler estimula seu raciocínio , faz você pensar mais rápido e aumenta sua 
-            capacidade oratória, ler é um dos melhores hábitos que você pode cultivar na sua vida !!!
+            capacidade oratória, ler é um dos melhores hábitos que você pode cultivar na sua vida !!! Então não deixe
+            de começar suas leituras o quanto antes, aqui garantimos pra você uma seleção especial de otimos livros que 
+            com certeza vão despertar em você a vontade de conhecer um pouco mais desse mundo fantántisco da leitura
           </p>
           <img src="imagens/livros.png" alt="menina Lendo" />
         </div>
       </section>
 
-      <section class="livrosdomes">
+      <section id = "livrosdomes" class="livrosdomes">
         <h2>Livros do Mês</h2>
         <div class="blocoimagenslivros">
           <img
@@ -134,10 +138,7 @@
           <div>
             <h3><em>Fundação - Isaac Asimov</em></h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Publicado originalmente em 1951, Fundação permite o encontro da grandiosidade temática inspirada por Declínio e queda do Império Romano, de Edward Gibbon, e as situações únicas de exploração do cenário galáctico e futurístico, retratando como isso reflete nos caminhos da humanidade. Bem-vindo à Fundação!.
             </p>
           </div>
         </div>
@@ -145,10 +146,7 @@
           <div>
             <h3><em>E Não Sobrou Nenhum - Agatha Christie</em></h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Lançado originalmente em 1939, E não sobrou nenhum continua a ser um dos livros mais lidos em todo o mundo e um marco literário. Esta edição de luxo é composta por capa dura com pintura trilateral, novo design e fitilho. Na obra, a rainha do crime, Agatha Christie, compõe um rol de personagens inesquecíveis, detalhando seus traços psicológicos, que se tornam cada vez mais exacerbados em função do confinamento, do medo de se tornar a próxima vítima e da suspeita que recai sobre todos. Nesse jogo de gato e rato, a autora quebra as premissas até então vigentes do gênero investigativo e muda, para sempre, as regras do jogo.
             </p>
           </div>
           <img
@@ -166,23 +164,17 @@
           <div>
             <h3><em>Ensaio Sobre a Cegueira - José Saramago</em></h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Uma terrível ""treva branca"" vai deixando cegos, um a um, os habitantes de uma cidade. Com essa fantasia aterradora, Saramago nos obriga fechar os olhos e ver. Recuperar a lucidez, resgatar o afeto: essas são as tarefas do escritor e de cada leitor, diante da pressão dos tempos e do que se perdeu.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="documentarios">
+      <section id = "documentarios" class="documentarios">
         <div class="textodocumentario">
           <h2>Documentários</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
-            consequuntur eum veniam. Porro aliquam maiores laudantium corporis
-            cum iste dolores hic excepturi ducimus ea. Aliquid deleniti ut harum
-            similique obcaecati.
+            Aqui uma seleção com os melhores documentários, todos os meses vamos trazer pra vocês uma lista especial com produções sobre ciência, arte e cultura 
           </p>
         </div>
         <div class="blocodocumentario">
@@ -198,10 +190,7 @@
           <div>
             <h3><em>Zeitgeist Addendu</em></h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              consectetur eaque mollitia expedita exercitationem culpa officia
-              nisi dignissimos, nesciunt voluptates atque cum ex quas repellat
-              facere asperiores deleniti, blanditiis a.
+              Zeitgeist, o filme (Zeitgeist, 2007) constrói uma linha de raciocínio em torno de fatos que normalmente são tidos como verdades absolutas pela maior parte das pessoas. Mas diferente do que há de se supor, a linha lógica destrói o senso comum. O filme reúne fontes diversas em torno de temas como religião, atentados terroristas e a formação do FED, que é a instituição americana que atua com atribuições parecidas ao nosso banco central.
             </p>
           </div>
         </div>
@@ -209,10 +198,7 @@
           <div>
             <h3><em> Uma História de Amor e Fúria </em></h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
-              qui omnis perspiciatis exercitationem dolorem delectus incidunt
-              sequi officia velit, at aperiam expedita repellendus libero nobis
-              amet numquam mollitia sint? Odio.
+              Um homem (Selton Mello) com quase 600 anos de idade acompanha a história do Brasil, enquanto procura a ressurreição de sua amada Janaína (Camila Pitanga). Ele enfrenta as batalhas entre tupinambás e tupiniquins, antes dos portugueses chegarem ao país, e passa pela Balaiada e o movimento de resistência contra a ditadura militar, antes de enfrentar a guerra pela água em 2096.
             </p>
           </div>
           <iframe
@@ -238,16 +224,13 @@
           <div>
             <h3><em>O Dia que Durou 21 anos</em></h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Quibusdam non reprehenderit quae, distinctio tenetur veniam
-              expedita, accusamus incidunt deserunt quaerat deleniti ducimus
-              excepturi unde accusantium aspernatur sint eligendi omnis rem.
+              O documentário explora o papel que os Estados Unidos tiveram no golpe de 1964 e no regime militar que se estendeu por 21 anos, até 1985. Investiga o papel de seu principal interlocutor, o embaixador Lincoln Gordon, gerenciando 1,2 mil funcionários e um polpudo orçamento destinado a financiar estudos (por meio do IPES – Instituto de Pesquisas e Estudos Sociais – e do IBAD – Instituto Brasileiro de Ação Democrática) e disseminar propaganda para desestabilizar o governo do presidente João Goulart.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="musicas">
+      <section id = "musicas" class="musicas">
         <div class = "blocotextomusicas">
           <h2>Musicas</h2>
           <p>
