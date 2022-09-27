@@ -112,16 +112,15 @@ a{
 .titulocorpopagina1{
   text-align: center;
   font-style: normal;
-  font-weight: 700;
   font-size: 30px;
   line-height: 42px;
-  margin-top: 7vh;
+  margin-top: 10vh;
 }
 
 .corpopagina1 img{
   width: 297px;
-  height: 513px;
-  
+  height: 413px;
+
 }
 
 .corpopagina1 p{
@@ -131,7 +130,6 @@ a{
   line-height: 34px;
   text-align: justify;
   padding: 5px 5px 5px 5px;
-  height: 513px;
 }
 
 /*------------------------------SECTION LIVROS-----------------------------------------------*/
@@ -148,7 +146,6 @@ a{
   font-size: 30px;
   line-height: 42px;
   padding-bottom: 20px;
-  margin-top: 0;
 }
 
 .livrosdomes p,h3 {
