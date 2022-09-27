@@ -7,7 +7,50 @@
     <link rel="stylesheet" href="reset/reset.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Brain Academy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Adicionando smooth para todos os links
+            $("a").on('click', function (event) {
+
+                // fazendo com que o valor do this.hash esteja certo em todo tempo
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    // Salvando valor hash
+                    var hash = this.hash;
+
+                    // Usando jQuery para adicionar smooth de rolanmento de página
+                    // Adicionando onde deve ser usado o método e colocando periodo de tempo para scrolar a página
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        //Colocando que sempre que o hash(#) for colado deve ativar a função
+                        window.location.hash = hash;
+                    });
+                } // fim
+
+
+                window.onscroll = function () { myFunction() };
+
+                var header = document.getElementById("Header");
+                var sticky = header.offsetTop;
+
+                function myFunction() {
+                    if (window.pageYOffset > sticky) {
+                        header.classList.add("sticky");
+                    } else {
+                        header.classList.remove("sticky");
+                    }
+                }
+
+            });
+        });
+    </script>
   </head>
+  
   <body>
     <div class="container">
       <header>
@@ -24,7 +67,7 @@
           <nav>
             <ul class="menus">
               <li>Inicio |</li>
-              <li>Por que ler? |</li>
+              <li><a href = "#porqueler">Por que ler? |</a></li>
               <li>Livros do mês |</li>
               <li>Documentários |</li>
               <li>Músicas</li>
@@ -69,7 +112,7 @@
         </div>
       </section>
 
-      <section class="porqueler">
+      <section id = "porqueler" class="porqueler" >
         <h2 class="titulocorpopagina1"><b> Por que ler ? </b></h2>
         <div class="corpopagina1">
           <p>
@@ -223,7 +266,9 @@
         </div>
       </section>
 
-      <section class="musicas"></section>
+      <section class="musicas">
+      </section>
+
     </div>
   </body>
 </html>
