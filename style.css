@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body{
   background: #F3EDED;
+}
+
+body p,li{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body h1,h2,h3{
+  font-family: 'Crimson Text', serif;
 }
 
 /*------------------------------SECTION HEADER-----------------------------------------------*/
@@ -9,6 +19,7 @@ header{
   width: 100%;
   display: flex;
   justify-content: center;
+  
 }
 
 .sectionsuperior{
@@ -129,6 +140,7 @@ a{
   line-height: 34px;
   text-align: justify;
   padding: 30px;
+  margin-block-end: 20vh;
 }
 
 /*------------------------------SECTION LIVROS-----------------------------------------------*/
@@ -136,24 +148,24 @@ a{
   width: 151px;
   height: 237px;
   padding: 30px;
+  display: none;
 }
 
 .livrosdomes h2{
   text-align: center;
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 42px;
+  
+;
 }
 
 .livrosdomes p,h3 {
-  padding-bottom: 10px;
   font-weight: 400;
   font-size: 25px;
-  line-height: 34px;
-  text-align: justify;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height:
 }
 
 .livrosdomes h3{
@@ -175,8 +187,8 @@ a{
   font-weight: 700;
   font-size: 30px;
   line-height: 42px;
-  padding-bottom: 10px;
   margin-top: 4vh;
+  
 }
 
 .textodocumentario p{
@@ -185,7 +197,7 @@ a{
   font-size: 25px;
   line-height: 34px;
   text-align: justify;
-  padding: 5px 30px 0 30px;
+  padding: 5px 20px 0 20px;
 }
 
 .blocodocumentario {
